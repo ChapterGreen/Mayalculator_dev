@@ -1,0 +1,101 @@
+/* input[type="number"]のスピナーボタンを非表示 */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+:root {
+    --pc-kinBirthday: 100;
+    --Pc-otherCalendar: 100;
+    --pc-storyKIN: 100;
+    --pc-personalKIN: 10;
+    --pc-kinCycle: 30;
+    --table-border-color: #D5D8DA;
+}
+
+.table-active {
+    filter: invert(100%);
+}
+
+.result-header {
+    position: sticky;
+    top: 0;
+}
+
+.table-border-color {
+    border-color: var(--table-border-color);
+}
+
+.result-section{
+    margin-bottom: 0px;
+}
+
+.result-header::before {
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: -0.5px;
+    width: calc(100% + 1px);
+    height: calc(100% + 0px);
+    border-left-color: var(--table-border-color);
+    border-right-color: var(--table-border-color);
+    border-top: 2px solid var(--bs-dark);
+    border-bottom: 2px solid var(--bs-dark);
+}
+
+.set-kinBirthdayHeight {
+    height: calc(var(--onePc-kinBirthday) * var(--pc-kinBirthday));
+}
+.set-otherCalendarHeight {
+    height: calc(var(--onePc-otherCalendar) * var(--pc-otherCalendar));
+}
+.set-storyKINHeight {
+    height: calc(var(--onePc-storyKIN) * var(--pc-storyKIN));
+}
+.set-personalKINHeight {
+    height: calc(var(--onePc-personalKIN) * var(--pc-personalKIN));
+}
+.set-kinCycleHeight {
+    height: calc(var(--onePc-kinCycle) * var(--pc-kinCycle));
+}
+
+#kinBirthday,
+#otherCalendar,
+#storyKIN,
+#personalKIN,
+#kinCycle {
+    content-visibility: auto;
+}
+
+.set-kinBirthdayHeight,
+.set-otherCalendarHeight,
+.set-storyKINHeight,
+.set-personalKINHeight,
+.set-kinCycleHeight {
+    margin-bottom: 0px;
+    overflow: auto;
+}
+
+#resultFormHeader {
+    position: -webkit-fixed;
+    position: fixed;
+    text-align: center;
+    transition: .5s;
+    z-index: 10;
+}
+
+#pageHeader {
+    top: 0px;
+    position: -webkit-fixed;
+    position: fixed;
+    text-align: center;
+    z-index: 11;
+}
+
+#calcResult.enableCalc {
+    cursor: pointer;
+}

@@ -1,0 +1,967 @@
+
+<!--  ■■■   ■   ■  ■■■■■  ■   ■  ■■■■■  ■■■■  -->
+<!-- ■   ■  ■   ■    ■    ■   ■  ■      ■   ■ -->
+<!-- ■■■■■  ■   ■    ■    ■■■■■  ■■■■■  ■■■■  -->
+<!-- ■   ■  ■   ■    ■    ■   ■  ■      ■  ■  -->
+<!-- ■   ■   ■■■     ■    ■   ■  ■■■■■  ■   ■ -->
+<!--  -->
+<!--  ■■■■  ■   ■   ■■■   ■■■■   ■■■■■  ■■■■■  ■■■■           ■■■   ■■■■   ■■■■■  ■■■■■  ■   ■ -->
+<!-- ■      ■   ■  ■   ■  ■   ■    ■    ■      ■   ■         ■      ■   ■  ■      ■      ■■  ■ -->
+<!-- ■      ■■■■■  ■■■■■  ■■■■     ■    ■■■■■  ■■■■          ■  ■■  ■■■■   ■■■■■  ■■■■■  ■ ■ ■ -->
+<!-- ■      ■   ■  ■   ■  ■        ■    ■      ■  ■          ■   ■  ■  ■   ■      ■      ■  ■■ -->
+<!--  ■■■■  ■   ■  ■   ■  ■        ■    ■■■■■  ■   ■          ■■■   ■   ■  ■■■■■  ■■■■■  ■   ■ -->
+<!--  -->
+<!--  -->
+<!--  -->
+<!--  ■■■■  ■   ■  ■■■■   ■■■■■  ■■■■   ■   ■   ■■■    ■■■■  ■■■■■  ■■■■  -->
+<!-- ■      ■   ■  ■   ■  ■      ■   ■  ■   ■    ■    ■      ■      ■   ■ -->
+<!--  ■■■   ■   ■  ■■■■   ■■■■■  ■■■■   ■   ■    ■     ■■■   ■■■■■  ■   ■ -->
+<!--     ■  ■   ■  ■      ■      ■  ■    ■ ■     ■        ■  ■      ■   ■ -->
+<!-- ■■■■    ■■■   ■      ■■■■■  ■   ■    ■     ■■■   ■■■■   ■■■■■  ■■■■  -->
+<!--  -->
+<!-- ■■■■   ■   ■ -->
+<!-- ■   ■   ■ ■  -->
+<!-- ■■■■     ■   -->
+<!-- ■   ■    ■   -->
+<!-- ■■■■     ■   -->
+
+<!-- ■   ■  ■   ■   ■   ■   ■■■   ■   ■   ■■■  -->
+<!--  ■ ■   ■   ■   ■  ■     ■    ■■  ■  ■   ■ -->
+<!--   ■    ■   ■   ■■■      ■    ■ ■ ■  ■■■■■ -->
+<!--   ■    ■   ■   ■  ■     ■    ■  ■■  ■   ■ -->
+<!--   ■     ■■■    ■   ■   ■■■   ■   ■  ■   ■  -->
+
+<!-- ~~~~~~~~~~~.~~.~~.~..~.......................................................................`...... -->
+<!-- ~~.~~.~~..~~.~..~.~~.~~.~~.~~..~..~..~....................`..`..`..`..`..`..`..`..`..``.``.`..``.`.` -->
+<!-- ~.~~.~~.~~.~.~~.~..~......~..~..~..~....................`..`..`...`..`..`..`..`..`..`..`..`.`..`..`. -->
+<!-- ~~~.~.~~.~..~..~.~.~.~~~......~........~............`.`..`.....`....`.....`..`.`..`.`..`...`.`..`..` -->
+<!-- ~~.~~.~.~.~~.~~.~.~.~..~.~.~...~.~.~............_...........`....`...`.`.`..`..`..`..`..``..`.`..`.. -->
+<!-- ~.~~.~.~.~..~..~.~...~....~.~........~...~._(+QkkkQQ+._.......`...`...`.`..`.`..`..`.`.`..`..`.`.`.` -->
+<!-- .~..~.~.~.~~.~~.~.~~..~.~....~.~.~......~(jXM@MMMMMH@@Hkk+_....`..`..`...`..`..`.`..`..`..`..`..`... -->
+<!-- ~~.~.~~.~.~.~..~...~...~.~.~....~...~._-(dHMMMNHMMMMMHHMMNn,.`..`..`..`.`.`..`..`.`..`..`.`.`..`..`. -->
+<!-- ~.~.~..~.~.~.~.~.~..~~......~......~(dWHMMMHMH#HH#MHMMMHkHWHn...`.`.`..`..`.`.`..`.`.``..`..`.`.``.` -->
+<!-- .~.~.~~.~.~.~.~..~..~..~.~...~.~.~_jWMMMMHMMMMHN#M#HH#HMWWHHA,.....`.`..`..`..`.`..`..``.`.`.`.`.`.` -->
+<!-- ~.~.~..~.~..~..~..~...~..~..~...~.(WHHMHHMHHHM#NNNN#HHMHH@HWWk_.`.`..`..`.`.`..``.`.`..``.`.`.`...`. -->
+<!-- .~.~.~~.~..~.~..~..~.~....~...~..~dHMMHMMHHNMNMMNNN#M@MHHMHZWu>...`..`.`.`.```.`.`.``.`..`.`.`.``.`. -->
+<!-- ~.~..~..~.....~..~..~..~...~...~.(XHMMMHMMMMNNNNNNN#MHHMHMVXXw>..`.`..`.`.`..`..`.`..``.`.`.`.`..`.` -->
+<!-- .~.~..~.~~.~..~...~....~..~..~..~(XpMMHMMMMNNNNN##NMHWMB9|(wH6< ..`.`..`..`.`.``.`.`.`.`.`.`.`.``.`. -->
+<!-- .~.~~.~...~.~..~.~..~...~..~....._zWHMMNMMMMMNNNMMMHkHMBkr,z3C< ~..`.`.`.`.`.`.`..`.`...`.`.`..`.``` -->
+<!-- ~....~...~..~.~......~..~..~......_OWHHMMHHMHMN#MmHWWHH$UidXo_  _.`.`.`.`.`.`.`.``.`.``.`.`.``..`.`. -->
+<!-- ..~...~.~..~...~.~.~..~..~...~.~..~_XWHHMMHM@M#MHqkbWWWy&jHWk2.....`..`..`.`..`..`.`.`.`.`.`.``.``.` -->
+<!-- ..~.~..~.~...~....~..~..~.~.~...~...(XWHkHHMgHMMqqkkkbpVXWHWI!...`..`..`.`.`.`.``.`.`.`.`.`.`.``.``. -->
+<!-- ~..~..~...~.~.~.~...~..~...~........._4kMMKHMHqqqkqkkbbpWWkkX>...`..``.`..`.`.`..`.`.`.`.`.``.`.`.`` -->
+<!-- ~....~...~.....~.~.~..~..~....~..~...._THMMw#OWHqqqkkbbppWMH0!..`..`..`.`.`.`.``.`.`.`.`.`..``.``.`` -->
+<!-- .~.~...~..~.~.....~..~..~..~...~...~....(W#d#kwWpHqqkkkbppWk<.....`.`..`.`.`.`..`.`.`.`.`.`.``.`.`.` -->
+<!-- ..~.~...~..~.~~.~...~..~..~............._(mdNWHHHHmmmmmmkkp0>...`..`.``..`..`.``.`.`.`.`.`.`.``.``.` -->
+<!-- ..~..~..~......~.~...~...~..~.~..........d#NMMMMH@ggmHUY""7!.....`.`...`..``.`..`.`.`.`.`.`.`.``.``` -->
+<!-- ~..~...~..~.~.....~.~..~..~....~...~....(H#NMMMMNMMMMHIHr.....`...`.`.`.``.`.`.`.`.`.`.`.```.`.``.`` -->
+<!-- ~.~...~..~.~.~.~..~..~..~..~..........~(MNMMNMNMMMMMNNMY_......`.`.`.`.`..`.`.`.`.`.`.`..`.``.`.`.`` -->
+<!-- ..~..~..~.....~.~..~..~..~...~......_(gMMMNMMMNMMNNNNMH_.....`....`..`..`..`.`.`.`.`.`.``...````.`.` -->
+<!-- .~..~....~.~.....~..~..~......~..~(JMMNNNNMNMMMMNNMN#HHHm.._...`..`..``.``.``.`.`.`.``..``.`.`.``.`. -->
+<!-- ..~...~...~.~~.~..~..~..~..~....(dMNNMMMNMNNMNNMMNNN###HNHH@m,_.`.``..`..`..`.`.`.`..`.`..```.`.```` -->
+<!-- .~..~..~......~..~..~..~.~....(JMNNNNNNNMNMMNNNNMNMM#HHHMd@M@@He....`..`..``.`.`.`.``.`.``..`.``..`. -->
+<!-- ..~..~..~~.~...~..~...~.....~(MNNNMNNNNNNNNNMNNNNN#NHMMMHHHH@@@gL...`.`..``.`.`.`.`.`.`.`.`..`.``.`` -->
+<!-- .~..~..~..~.~.~..~..~..~..~(dNNNMNNMNMNNNNNNNNMNN###HHHHHHHHH@MgH-.`..``...`..`.`.`..`.`.`.``.`.``.` -->
+<!-- ..~..~.......~..~..~..~..~(MNMNMMNMNMNNNNNNNNNNN####HHHHH@HHH@HMH[......`.`.`..`.`.``.`.`.`..`.`.``. -->
+<!-- ~..~..~.~~.~...~..~..~..~JMNNMMNMMNMNNNMNNMNNNNN####HHHHHH@HHH@@Hb..``...`.`.`.`.`.`.`..`.``.``.`.`` -->
+<!-- ~~..~.~...~.~.~..~..~..~(@MNMMNMNMMNMMNMNMNNMMNN###HHHHHHHH@HH@@@H[..`.`...`..`.`.`..`.`.`..`..`.`.` -->
+<!-- ..~..~.~.....~..~..~..~.JMMNMNMNMNMMNMMNMMNMNNNNN##H#HH@HHHH@HH@@HH...`..`..`.`..`..`.`.`..`.``.`.`. -->
+<!-- ~..~..~.~~.~..~..~...~.(MNMMNMMNMMNMNMMNMNNMMMNNNN##HHHHH@HHHHHH@HH{.`....`.``.`.`.`.`..`.``..`..`.` -->
+<!-- ~~.~~....~.~.~.~..~...(d#NMNMNMMNMMNNMMMNMMNMMNMNNN##HHHHHHHHHH@@@H[..`.``.`..`.`.`.`.`..`..`.``.`.` -->
+<!-- .~.~.~.~..~...~.~..~~.JMNNMNMMNMMNMMNMMMNMMMNMNMMNN#HHHHHHHHHHH@H@Hb...`..`..`..`..`..``.`.`.`..`.`. -->
+<!-- ~...~.~.~~..~..~.~..~(HMNMNMNMNNMMNMMMMNMNMNMNMNMNNN#HHHHHHHHHH@HHHN.`.....`..`..`.`.`..`.`.`..`.`.` -->
+<!-- .~~~.~..~..~.~..~.~..dMMNMNMMNMMMNMNNMMMMMMMMMMMMMMN#HHHHHHHHHH@@HMM-.`.`..`..`..`..`..`..`..``.`..` -->
+<!-- ~.~..~..~.~.~.~..~.~.HMNNMNMMNMMNMMNMMMMNMMNNNNMNNMN#HHHHHHHHHHH@HMM[....`..`..``.`.`.`.`.`.`..`.`.. -->
+<!-- ~~.~~.~~...~..~...~..dNNNMNNMMNMMMNMMNMMMNMMMMMMMMNMN#HHHHHHHHHH@HH@]_..`...`........`.....`..`..``. -->
+<!-- ~.~..~..~.~..~.~...~(MM#NMNNMNMNMNMNNMMMMNMMMNMNMMMNM#HHHH##HHHH@MHMb....`...`..`.`...`.`..`.`.`..`. -->
+<!-- ~~.~~.~~.~~.~..~~.~.(#N#NNNNMMMMMMMMMNMMNMMNMMNMNMMMMNM@H####HHH@MHMN...`..`..`..`..`..`.`..`..`.`.` -->
+<!-- ~.~~.~..~..~.~...~..d##MMMNNMNMMNNNMMNMMMNMMNMMMNMNMNNM@H####HHHMMHH#.......`......`......`...`...`. -->
+<!-- ~~..~~.~.~.~.~.~.~~.dHHMMNNMMNMMMMNMNMMMNMNMMNMNMMMNMMMHH#NN#HHHH@H@F....`.....`..`..`.`...`...`.... -->
+<!-- ~~~~.~~.~~.~~.~.~.~~d#HNNMNNMMNMMNMMMMMMMNMMNMMNMMNMMNNHH#NNN#HHHgM@b...........`.....`..`..`...`..` -->
+<!-- ~~~~~.~~.~..~.~~..~.H#HMMNMMMMNMNMMMMNMMNMMNMMNMMNMMNMNMH#NMNN#HHMMHH:......`......`....`....`...`.. -->
+<!-- ~.~.~~.~~.~~~~.~.~~_MHMMMNMMNMMNMMNNMMMMNMMNMMNMMNMMMMMMH#NNNNN##HH@H...............`..`..`..`..`... -->
+<!-- ~~.~~~~.~~.~..~.~..(HHMNNMMMMNMNMMMMMMMMNMMNMMNMMNMNMNMMHNNNNMN##H@MH.......................`....... -->
+<!-- ~~~~.~~~~~.~~~.~~.~_MMNMMNMMNMNMNNMNMNMNMMNMMNMMNMMNMMNNMNNNNMMNN#M@Mt...........................`.. -->
+<!-- ~~~~~.~.~~~.~~.~~~.~dHNNMNMMMNMMNMMMMMMNMMNMNMMNMMNMMNMNHNMNNNMMNNMMH~.............................. -->
+<!--  -->
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="Content-Language" content="ja">
+    <meta name="google" content="notranslate">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'">
+    <link rel="stylesheet" href="css/style.css" type="text/css">
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <script src="js/KINCalendar.js" defer></script>
+    <title>Mayalculator</title>
+</head>
+<body class="bg-light">
+    <div id="pageOffset"></div>
+    <h1 class="container-fluid p-3 text-center">Mayalculator</h1>
+    <!-- ページ設定 -->
+    <h2 class="container-fluid p-3 text-center bg-secondary bg-opacity-10 border-top border-bottom border-secondary" name="formLabel" id="pageInit">ページ設定</h2>
+    <div class="my-2 container-fluid" id="initForm">
+        <div class="row">
+            <div class="row">
+                <div class="w-75">カレンダーの設定</div>
+                <div class="w-25">KIN周期表の設定</div>
+            </div>
+        </div>
+        <div class="mt-1 row" id="calendarInitForm">
+            <div class="col input-group">
+                <div class="w-75 input-group">
+                    <button class="col btn btn-outline-secondary" id="calendarInc" name="calendarSetupButtons" type="button">カレンダーを増やす</button>
+                    <button class="col btn btn-outline-secondary" id="calendarDec" name="calendarSetupButtons" type="button">カレンダーを減らす</button>
+                    <button class="col btn btn-outline-secondary" id="calendarRst" name="calendarSetupButtons" type="button">リセット</button>
+                </div>
+                <div class="w-25 input-group">
+                    <form class="form-floating" name="setupForms">
+                        <input type="number" class="form-control" id="inputKINCycleRange" placeholder="1~100" value="15" min="1" max="100" required>
+                        <label for="inputKINCycleRange">計算範囲(1~100)</label>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="mt-2 row">
+            <div class="row">
+                <div>計算結果の表示設定</div>
+            </div>
+            <div class="row">
+                <div class="col">他の暦</div>
+                <div class="col">起承転結</div>
+                <div class="col">個人KIN年表</div>
+                <div class="col">KIN周期表</div>
+            </div>
+        </div>
+        <div class="mt-1 row">
+            <div class="col input-group" id="initTableDisplay">
+                <div class="col input-group">
+                    <button type="button" name="tableShowBottons" id="enable-otherCalendar" class="btn btn-outline-secondary">表示中</button>
+                    <form class="form-floating" name="setupForms">
+                        <input type="number" class="form-control" name="setTablesHeight" id="pc-otherCalendar" placeholder="1~100%" aria-describedby="enable-otherCalendar" value="100" min="1" max="100" required>
+                        <label for="pc-otherCalendar">縦幅</label>
+                    </form>
+                    <span class="input-group-text">%</span>
+                </div>
+                <div class="col input-group">
+                    <button type="button" name="tableShowBottons" id="enable-storyKIN" class="btn btn-outline-secondary">表示中</button>
+                    <form class="form-floating" name="setupForms">
+                        <input type="number" class="form-control" name="setTablesHeight" id="pc-storyKIN" placeholder="1~100%" aria-describedby="enable-storyKIN" value="100" min="1" max="100" required>
+                        <label for="pc-storyKIN">縦幅</label>
+                    </form>
+                    <span class="input-group-text">%</span>
+                </div>
+                <div class="col input-group">
+                    <button type="button" name="tableShowBottons" id="enable-personalKIN" class="btn btn-outline-secondary">表示中</button>
+                    <form class="form-floating" name="setupForms">
+                        <input type="number" class="form-control" name="setTablesHeight" id="pc-personalKIN" placeholder="1~100%" aria-describedby="enable-personalKIN" value="10" min="1" max="100" required>
+                        <label for="pc-personalKIN">縦幅</label>
+                    </form>
+                    <span class="input-group-text">%</span>
+                </div>
+                <div class="col input-group">
+                    <button type="button" name="tableShowBottons" id="enable-kinCycle" class="btn btn-outline-secondary">表示中</button>
+                    <form class="form-floating" name="setupForms">
+                        <input type="number" class="form-control" name="setTablesHeight" id="pc-kinCycle" placeholder="1~100%" aria-describedby="enable-kinCycle" value="30" min="1" max="100" required>
+                        <label for="vhKINCycle">縦幅</label>
+                    </form>
+                    <span class="input-group-text">%</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 生年月日入力 -->
+    <h2 class="container-fluid p-3 text-center bg-secondary bg-opacity-10 border-top border-bottom border-secondary" name="formLabel" id="inputBirthday">生年月日入力</h2>
+    <div class="container-fluid" id="inputValueForm">
+        <div class="my-2 row">
+            <div class="col" id="inputForms1">
+                <form class="form-floating">
+                    <input type="text" class="form-control" id="inputName1" name="inputNames" placeholder="Name" value="カレンダー1" maxlength="20" required>
+                    <label for="inputName1">名前</label>
+                </form>
+                <form class="form-floating">
+                    <input type="number" class="form-control" id="inputYear1" name="inputBirths" placeholder="yyyy" min="-3113" max="9999" required>
+                    <label for="inputYear1">年(西暦)</label>
+                </form>
+                <form class="form-floating">
+                    <input type="number" class="form-control" id="inputMonth1" name="inputBirths" placeholder="mm" min="1" max="12" required>
+                    <label for="inputMonth1">月</label>
+                </form>
+                <form class="form-floating">
+                    <input type="number" class="form-control" id="inputDay1" name="inputBirths" placeholder="dd" min="1" required>
+                    <label for="inputDay1">日</label>
+                </form>
+                <button type="button" class="btn btn-outline-secondary w-100" id="calcBtn1" name="calcBtns" disabled>計算済</button>
+            </div>
+            <div class="col" id="inputForms2">
+                <form class="form-floating">
+                    <input type="text" class="form-control" id="inputName2" name="inputNames" placeholder="Name" value="カレンダー2" maxlength="20" required>
+                    <label for="inputName2">名前</label>
+                </form>
+                <form class="form-floating">
+                    <input type="number" class="form-control" id="inputYear2" name="inputBirths" placeholder="yyyy" min="-3113" max="9999" required>
+                    <label for="inputYear2">年(西暦)</label>
+                </form>
+                <form class="form-floating">
+                    <input type="number" class="form-control" id="inputMonth2" name="inputBirths" placeholder="mm" min="1" max="12" required>
+                    <label for="inputMonth2">月</label>
+                </form>
+                <form class="form-floating">
+                    <input type="number" class="form-control" id="inputDay2" name="inputBirths" placeholder="dd" min="1" required>
+                    <label for="inputDay2">日</label>
+                </form>
+                <button type="button" class="btn btn-outline-secondary w-100" id="calcBtn2" name="calcBtns" disabled>計算済</button>
+            </div>
+            <div class="col" id="inputForms3" hidden>
+                <form class="form-floating">
+                    <input type="text" class="form-control" id="inputName3" name="inputNames" placeholder="Name" value="カレンダー3" maxlength="20" required>
+                    <label for="inputName3">名前</label>
+                </form>
+                <form class="form-floating">
+                    <input type="number" class="form-control" id="inputYear3" name="inputBirths" placeholder="yyyy" min="-3113" max="9999" required>
+                    <label for="inputYear3">年(西暦)</label>
+                </form>
+                <form class="form-floating">
+                    <input type="number" class="form-control" id="inputMonth3" name="inputBirths" placeholder="mm" min="1" max="12" required>
+                    <label for="inputMonth3">月</label>
+                </form>
+                <form class="form-floating">
+                    <input type="number" class="form-control" id="inputDay3" name="inputBirths" placeholder="dd" min="1" required>
+                    <label for="inputDay3">日</label>
+                </form>
+                <button type="button" class="btn btn-outline-secondary w-100" id="calcBtn3" name="calcBtns" disabled>計算済</button>
+            </div>
+            <div class="col" id="inputForms4" hidden>
+                <form class="form-floating">
+                    <input type="text" class="form-control" id="inputName4" name="inputNames" placeholder="Name" value="カレンダー4" maxlength="20" required>
+                    <label for="inputName4">名前</label>
+                </form>
+                <form class="form-floating">
+                    <input type="number" class="form-control" id="inputYear4" name="inputBirths" placeholder="yyyy" min="1" max="9999" required>
+                    <label for="inputYear4">年(西暦)</label>
+                </form>
+                <form class="form-floating">
+                    <input type="number" class="form-control" id="inputMonth4" name="inputBirths" placeholder="mm" min="1" max="12" required>
+                    <label for="inputMonth4">月</label>
+                </form>
+                <form class="form-floating">
+                    <input type="number" class="form-control" id="inputDay4" name="inputBirths" placeholder="dd" min="1" required>
+                    <label for="inputDay4">日</label>
+                </form>
+                <button type="button" class="btn btn-outline-secondary w-100" id="calcBtn4" name="calcBtns" disabled>計算済</button>
+            </div>
+            <div class="col" id="inputForms5" hidden>
+                <form class="form-floating">
+                    <input type="text" class="form-control" id="inputName5" name="inputNames" placeholder="Name" value="カレンダー5" maxlength="20" required>
+                    <label for="inputName5">名前</label>
+                </form>
+                <form class="form-floating">
+                    <input type="number" class="form-control" id="inputYear5" name="inputBirths" placeholder="yyyy" min="-3113" max="9999" required>
+                    <label for="inputYear5">年(西暦)</label>
+                </form>
+                <form class="form-floating">
+                    <input type="number" class="form-control" id="inputMonth5" name="inputBirths" placeholder="mm" min="1" max="12" required>
+                    <label for="inputMonth5">月</label>
+                </form>
+                <form class="form-floating">
+                    <input type="number" class="form-control" id="inputDay5" name="inputBirths" placeholder="dd" min="1" required>
+                    <label for="inputDay5">日</label>
+                </form>
+                <button type="button" class="btn btn-outline-secondary w-100" id="calcBtn5" name="calcBtns" disabled>計算済</button>
+            </div>
+            <div class="col" id="inputForms6" hidden>
+                <form class="form-floating">
+                    <input type="text" class="form-control" id="inputName6" name="inputNames" placeholder="Name" value="カレンダー6" maxlength="20" required>
+                    <label for="inputName6">名前</label>
+                </form>
+                <form class="form-floating">
+                    <input type="number" class="form-control" id="inputYear6" name="inputBirths" placeholder="yyyy" min="-3113" max="9999" required>
+                    <label for="inputYear6">年(西暦)</label>
+                </form>
+                <form class="form-floating">
+                    <input type="number" class="form-control" id="inputMonth6" name="inputBirths" placeholder="mm" min="1" max="12" required>
+                    <label for="inputMonth6">月</label>
+                </form>
+                <form class="form-floating">
+                    <input type="number" class="form-control" id="inputDay6" name="inputBirths" placeholder="dd" min="1" required>
+                    <label for="inputDay6">日</label>
+                </form>
+                <button type="button" class="btn btn-outline-secondary w-100" id="calcBtn6" name="calcBtns" disabled>計算済</button>
+            </div>
+            <div class="col" id="inputForms7" hidden>
+                <form class="form-floating">
+                    <input type="text" class="form-control" id="inputName7" name="inputNames" placeholder="Name" value="カレンダー7" maxlength="20" required>
+                    <label for="inputName7">名前</label>
+                </form>
+                <form class="form-floating">
+                    <input type="number" class="form-control" id="inputYear7" name="inputBirths" placeholder="yyyy" min="-3113" max="9999" required>
+                    <label for="inputYear7">年(西暦)</label>
+                </form>
+                <form class="form-floating">
+                    <input type="number" class="form-control" id="inputMonth7" name="inputBirths" placeholder="mm" min="1" max="12" required>
+                    <label for="inputMonth7">月</label>
+                </form>
+                <form class="form-floating">
+                    <input type="number" class="form-control" id="inputDay7" name="inputBirths" placeholder="dd" min="1" required>
+                    <label for="inputDay7">日</label>
+                </form>
+                <button type="button" class="btn btn-outline-secondary w-100" id="calcBtn7" name="calcBtns" disabled>計算済</button>
+            </div>
+            <div class="col" id="inputForms8" hidden>
+                <form class="col form-floating">
+                    <input type="text" class="form-control" id="inputName8" name="inputNames" placeholder="Name" value="カレンダー8" maxlength="20" required>
+                    <label for="inputName8">名前</label>
+                </form>
+                <form class="col form-floating">
+                    <input type="number" class="form-control" id="inputYear8" name="inputBirths" placeholder="yyyy" min="-3113" max="9999" required>
+                    <label for="inputYear8">年(西暦)</label>
+                </form>
+                <form class="col form-floating">
+                    <input type="number" class="form-control" id="inputMonth8" name="inputBirths" placeholder="mm" min="1" max="12" required>
+                    <label for="inputMonth8">月</label>
+                </form>
+                <form class="col form-floating">
+                    <input type="number" class="form-control" id="inputDay8" name="inputBirths" placeholder="dd" min="1" required>
+                    <label for="inputDay8">日</label>
+                </form>
+                <button type="button" class="btn btn-outline-secondary w-100" id="calcBtn8" name="calcBtns" disabled>計算済</button>
+            </div>
+        </div>
+    </div>
+    <!-- 計算結果 -->
+    <h2 class="container-fluid p-3 text-center bg-secondary bg-opacity-10 border-top border-bottom border-secondary" name="formLabel" id="calcResult">計算結果</h2>
+    <div class="container-fluid" id="resultForm">
+        <section class="mt-2 row result-section" id="birthdayForm">
+            <h3 hidden>入力情報</h3>
+            <div class="col text-center" id="birthdayInfo1">
+                <h5 id="birthdayName1"></h5>
+                <h5 id="resultBirthday1"></h5>
+                <h5 id="resultAge1"></h5>
+            </div>
+            <div class="col text-center" id="birthdayInfo2">
+                <h5 id="birthdayName2"></h5>
+                <h5 id="resultBirthday2"></h5>
+                <h5 id="resultAge2"></h5>
+            </div>
+            <div class="col text-center" id="birthdayInfo3" hidden>
+                <h5 id="birthdayName3"></h5>
+                <h5 id="resultBirthday3"></h5>
+                <h5 id="resultAge3"></h5>
+            </div>
+            <div class="col text-center" id="birthdayInfo4" hidden>
+                <h5 id="birthdayName4"></h5>
+                <h5 id="resultBirthday4"></h5>
+                <h5 id="resultAge4"></h5>
+            </div>
+            <div class="col text-center" id="birthdayInfo5" hidden>
+                <h5 id="birthdayName5"></h5>
+                <h5 id="resultBirthday5"></h5>
+                <h5 id="resultAge5"></h5>
+            </div>
+            <div class="col text-center" id="birthdayInfo6" hidden>
+                <h5 id="birthdayName6"></h5>
+                <h5 id="resultBirthday6"></h5>
+                <h5 id="resultAge6"></h5>
+            </div>
+            <div class="col text-center" id="birthdayInfo7" hidden>
+                <h5 id="birthdayName7"></h5>
+                <h5 id="resultBirthday7"></h5>
+                <h5 id="resultAge7"></h5>
+            </div>
+            <div class="col text-center" id="birthdayInfo8" hidden>
+                <h5 id="birthdayName8"></h5>
+                <h5 id="resultBirthday8"></h5>
+                <h5 id="resultAge8"></h5>
+            </div>
+        </section>
+        <section class="mb-2 row overflow-auto" id="kinBirthday">
+            <h3 class="container-fluid p-2 text-center bg-secondary bg-opacity-10 border-top border-bottom border-secondary result-section">ツォルキン</h3>
+            <div class="col" id="kinBirthdayTable1">
+                <table class="table table-sm table-striped table-hover table-bordered table-border-color">
+                    <thead class="result-header bg-light">
+                        <tr>
+                            <th scope="col">Tzolkin</th>
+                            <th scope="col">結果</th>
+                        </tr>
+                    </thead>
+                    <tbody id="kinBirthdayCalc1">
+                    </tbody>
+                </table>
+            </div>
+            <div class="col" id="kinBirthdayTable2">
+                <table class="table table-sm table-striped table-hover table-bordered table-border-color">
+                    <thead class="result-header bg-light">
+                        <tr>
+                            <th scope="col">Tzolkin</th>
+                            <th scope="col">結果</th>
+                        </tr>
+                    </thead>
+                    <tbody id="kinBirthdayCalc2">
+                    </tbody>
+                </table>
+            </div>
+            <div class="col" id="kinBirthdayTable3" hidden>
+                <table class="table table-sm table-striped table-hover table-bordered table-border-color">
+                    <thead class="result-header bg-light">
+                        <tr>
+                            <th scope="col">Tzolkin</th>
+                            <th scope="col">結果</th>
+                        </tr>
+                    </thead>
+                    <tbody id="kinBirthdayCalc3">
+                    </tbody>
+                </table>
+            </div>
+            <div class="col" id="kinBirthdayTable4" hidden>
+                <table class="table table-sm table-striped table-hover table-bordered table-border-color">
+                    <thead class="result-header bg-light">
+                        <tr>
+                            <th scope="col">Tzolkin</th>
+                            <th scope="col">結果</th>
+                        </tr>
+                    </thead>
+                    <tbody id="kinBirthdayCalc4">
+                    </tbody>
+                </table>
+            </div>
+            <div class="col" id="kinBirthdayTable5" hidden>
+                <table class="table table-sm table-striped table-hover table-bordered table-border-color">
+                    <thead class="result-header bg-light">
+                        <tr>
+                            <th scope="col">Tzolkin</th>
+                            <th scope="col">結果</th>
+                        </tr>
+                    </thead>
+                    <tbody id="kinBirthdayCalc5">
+                    </tbody>
+                </table>
+            </div>
+            <div class="col" id="kinBirthdayTable6" hidden>
+                <table class="table table-sm table-striped table-hover table-bordered table-border-color">
+                    <thead class="result-header bg-light">
+                        <tr>
+                            <th scope="col">Tzolkin</th>
+                            <th scope="col">結果</th>
+                        </tr>
+                    </thead>
+                    <tbody id="kinBirthdayCalc6">
+                    </tbody>
+                </table>
+            </div>
+            <div class="col" id="kinBirthdayTable7" hidden>
+                <table class="table table-sm table-striped table-hover table-bordered table-border-color">
+                    <thead class="result-header bg-light">
+                        <tr>
+                            <th scope="col">Tzolkin</th>
+                            <th scope="col">結果</th>
+                        </tr>
+                    </thead>
+                    <tbody id="kinBirthdayCalc7">
+                    </tbody>
+                </table>
+            </div>
+            <div class="col" id="kinBirthdayTable8" hidden>
+                <table class="table table-sm table-striped table-hover table-bordered table-border-color">
+                    <thead class="result-header bg-light">
+                        <tr>
+                            <th scope="col">Tzolkin</th>
+                            <th scope="col">結果</th>
+                        </tr>
+                    </thead>
+                    <tbody id="kinBirthdayCalc8">
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <section class="mb-2 row overflow-auto" id="otherCalendar">
+            <h3 class="container-fluid p-2 text-center bg-secondary bg-opacity-10 border-top border-bottom border-secondary result-section">他の暦</h3>
+            <div class="col" id="otherCalendarTable1">
+                <table class="table table-sm table-striped table-hover table-bordered table-border-color">
+                    <thead class="result-header bg-light">
+                        <tr>
+                            <th scope="col">他の暦</th>
+                            <th scope="col">日付</th>
+                        </tr>
+                    </thead>
+                    <div>
+                        <tbody id="otherCalendarCalc1">
+                        </tbody>
+                    </div>
+                </table>
+            </div>
+            <div class="col" id="otherCalendarTable2">
+                <table class="table table-sm table-striped table-hover table-bordered table-border-color">
+                    <thead class="result-header bg-light">
+                        <tr>
+                            <th scope="col">他の暦</th>
+                            <th scope="col">日付</th>
+                        </tr>
+                    </thead>
+                    <div>
+                        <tbody id="otherCalendarCalc2">
+                        </tbody>
+                    </div>
+                </table>
+            </div>
+            <div class="col" id="otherCalendarTable3" hidden>
+                <table class="table table-sm table-striped table-hover table-bordered table-border-color">
+                    <thead class="result-header bg-light">
+                        <tr>
+                            <th scope="col">他の暦</th>
+                            <th scope="col">日付</th>
+                        </tr>
+                    </thead>
+                    <div>
+                        <tbody id="otherCalendarCalc3">
+                        </tbody>
+                    </div>
+                </table>
+            </div>
+            <div class="col" id="otherCalendarTable4" hidden>
+                <table class="table table-sm table-striped table-hover table-bordered table-border-color">
+                    <thead class="result-header bg-light">
+                        <tr>
+                            <th scope="col">他の暦</th>
+                            <th scope="col">日付</th>
+                        </tr>
+                    </thead>
+                    <div>
+                        <tbody id="otherCalendarCalc4">
+                        </tbody>
+                    </div>
+                </table>
+            </div>
+            <div class="col" id="otherCalendarTable5" hidden>
+                <table class="table table-sm table-striped table-hover table-bordered table-border-color">
+                    <thead class="result-header bg-light">
+                        <tr>
+                            <th scope="col">他の暦</th>
+                            <th scope="col">日付</th>
+                        </tr>
+                    </thead>
+                    <div>
+                        <tbody id="otherCalendarCalc5">
+                        </tbody>
+                    </div>
+                </table>
+            </div>
+            <div class="col" id="otherCalendarTable6" hidden>
+                <table class="table table-sm table-striped table-hover table-bordered table-border-color">
+                    <thead class="result-header bg-light">
+                        <tr>
+                            <th scope="col">他の暦</th>
+                            <th scope="col">日付</th>
+                        </tr>
+                    </thead>
+                    <div>
+                        <tbody id="otherCalendarCalc6">
+                        </tbody>
+                    </div>
+                </table>
+            </div>
+            <div class="col" id="otherCalendarTable7" hidden>
+                <table class="table table-sm table-striped table-hover table-bordered table-border-color">
+                    <thead class="result-header bg-light">
+                        <tr>
+                            <th scope="col">他の暦</th>
+                            <th scope="col">日付</th>
+                        </tr>
+                    </thead>
+                    <div>
+                        <tbody id="otherCalendarCalc7">
+                        </tbody>
+                    </div>
+                </table>
+            </div>
+            <div class="col" id="otherCalendarTable8" hidden>
+                <table class="table table-sm table-striped table-hover table-bordered table-border-color">
+                    <thead class="result-header bg-light">
+                        <tr>
+                            <th scope="col">他の暦</th>
+                            <th scope="col">日付</th>
+                        </tr>
+                    </thead>
+                    <div>
+                        <tbody id="otherCalendarCalc8">
+                        </tbody>
+                    </div>
+                </table>
+            </div>
+        </section>
+        <section class="mb-2 row overflow-auto" id="storyKIN">
+            <h3 class="container-fluid p-2 text-center bg-secondary bg-opacity-10 border-top border-bottom border-secondary result-section">起承転結</h3>
+            <div class="col" id="storyKINTable1">
+                <table class="table table-sm table-striped table-hover table-bordered table-border-color">
+                    <thead class="result-header bg-light">
+                        <tr>
+                            <th scope="col">起承転結</th>
+                            <th scope="col">SC</th>
+                        </tr>
+                    </thead>
+                    <tbody id="storyKINCalc1">
+                    </tbody>
+                </table>
+            </div>
+            <div class="col" id="storyKINTable2">
+                <table class="table table-sm table-striped table-hover table-bordered table-border-color">
+                    <thead class="result-header bg-light">
+                        <tr>
+                            <th scope="col">起承転結</th>
+                            <th scope="col">SC</th>
+                        </tr>
+                    </thead>
+                    <tbody id="storyKINCalc2">
+                    </tbody>
+                </table>
+            </div>
+            <div class="col" id="storyKINTable3" hidden>
+                <table class="table table-sm table-striped table-hover table-bordered table-border-color">
+                    <thead class="result-header bg-light">
+                        <tr>
+                            <th scope="col">起承転結</th>
+                            <th scope="col">SC</th>
+                        </tr>
+                    </thead>
+                    <tbody id="storyKINCalc3">
+                    </tbody>
+                </table>
+            </div>
+            <div class="col" id="storyKINTable4" hidden>
+                <table class="table table-sm table-striped table-hover table-bordered table-border-color">
+                    <thead class="result-header bg-light">
+                        <tr>
+                            <th scope="col">起承転結</th>
+                            <th scope="col">SC</th>
+                        </tr>
+                    </thead>
+                    <tbody id="storyKINCalc4">
+                    </tbody>
+                </table>
+            </div>
+            <div class="col" id="storyKINTable5" hidden>
+                <table class="table table-sm table-striped table-hover table-bordered table-border-color">
+                    <thead class="result-header bg-light">
+                        <tr>
+                            <th scope="col">起承転結</th>
+                            <th scope="col">SC</th>
+                        </tr>
+                    </thead>
+                    <tbody id="storyKINCalc5">
+                    </tbody>
+                </table>
+            </div>
+            <div class="col" id="storyKINTable6" hidden>
+                <table class="table table-sm table-striped table-hover table-bordered table-border-color">
+                    <thead class="result-header bg-light">
+                        <tr>
+                            <th scope="col">起承転結</th>
+                            <th scope="col">SC</th>
+                        </tr>
+                    </thead>
+                    <tbody id="storyKINCalc6">
+                    </tbody>
+                </table>
+            </div>
+            <div class="col" id="storyKINTable7" hidden>
+                <table class="table table-sm table-striped table-hover table-bordered table-border-color">
+                    <thead class="result-header bg-light">
+                        <tr>
+                            <th scope="col">起承転結</th>
+                            <th scope="col">SC</th>
+                        </tr>
+                    </thead>
+                    <tbody id="storyKINCalc7">
+                    </tbody>
+                </table>
+            </div>
+            <div class="col" id="storyKINTable8" hidden>
+                <table class="table table-sm table-striped table-hover table-bordered table-border-color">
+                    <thead class="result-header bg-light">
+                        <tr>
+                            <th scope="col">起承転結</th>
+                            <th scope="col">SC</th>
+                        </tr>
+                    </thead>
+                    <tbody id="storyKINCalc8">
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <section class="mb-2 row overflow-auto" id="personalKIN">
+            <h3 class="container-fluid p-2 text-center bg-secondary bg-opacity-10 border-top border-bottom border-secondary result-section">個人KIN年表</h3>
+            <div class="col" id="personalKINTable1">
+                <table class="table table-sm table-striped table-hover table-bordered table-border-color">
+                    <thead class="result-header bg-light">
+                        <tr>
+                            <th scope="col">西暦(年齢)</th>
+                            <th scope="col">SC</th>
+                            <th scope="col">WS</th>
+                            <th scope="col">銀河の音</th>
+                        </tr>
+                    </thead>
+                    <tbody id="personalKINCalc1">
+                    </tbody>
+                </table>
+            </div>
+            <div class="col" id="personalKINTable2">
+                <table class="table table-sm table-striped table-hover table-bordered table-border-color">
+                    <thead class="result-header bg-light">
+                        <tr>
+                            <th scope="col">西暦(年齢)</th>
+                            <th scope="col">SC</th>
+                            <th scope="col">WS</th>
+                            <th scope="col">銀河の音</th>
+                        </tr>
+                    </thead>
+                    <tbody id="personalKINCalc2">
+                    </tbody>
+                </table>
+            </div>
+            <div class="col" id="personalKINTable3" hidden>
+                <table class="table table-sm table-striped table-hover table-bordered table-border-color">
+                    <thead class="result-header bg-light">
+                        <tr>
+                            <th scope="col">西暦(年齢)</th>
+                            <th scope="col">SC</th>
+                            <th scope="col">WS</th>
+                            <th scope="col">銀河の音</th>
+                        </tr>
+                    </thead>
+                    <tbody id="personalKINCalc3">
+                    </tbody>
+                </table>
+            </div>
+            <div class="col" id="personalKINTable4" hidden>
+                <table class="table table-sm table-striped table-hover table-bordered table-border-color">
+                    <thead class="result-header bg-light">
+                        <tr>
+                            <th scope="col">西暦(年齢)</th>
+                            <th scope="col">SC</th>
+                            <th scope="col">WS</th>
+                            <th scope="col">銀河の音</th>
+                        </tr>
+                    </thead>
+                    <tbody id="personalKINCalc4">
+                    </tbody>
+                </table>
+            </div>
+            <div class="col" id="personalKINTable5" hidden>
+                <table class="table table-sm table-striped table-hover table-bordered table-border-color">
+                    <thead class="result-header bg-light">
+                        <tr>
+                            <th scope="col">西暦(年齢)</th>
+                            <th scope="col">SC</th>
+                            <th scope="col">WS</th>
+                            <th scope="col">銀河の音</th>
+                        </tr>
+                    </thead>
+                    <tbody id="personalKINCalc5">
+                    </tbody>
+                </table>
+            </div>
+            <div class="col" id="personalKINTable6" hidden>
+                <table class="table table-sm table-striped table-hover table-bordered table-border-color">
+                    <thead class="result-header bg-light">
+                        <tr>
+                            <th scope="col">西暦(年齢)</th>
+                            <th scope="col">SC</th>
+                            <th scope="col">WS</th>
+                            <th scope="col">銀河の音</th>
+                        </tr>
+                    </thead>
+                    <tbody id="personalKINCalc6">
+                    </tbody>
+                </table>
+            </div>
+            <div class="col" id="personalKINTable7" hidden>
+                <table class="table table-sm table-striped table-hover table-bordered table-border-color">
+                    <thead class="result-header bg-light">
+                        <tr>
+                            <th scope="col">西暦(年齢)</th>
+                            <th scope="col">SC</th>
+                            <th scope="col">WS</th>
+                            <th scope="col">銀河の音</th>
+                        </tr>
+                    </thead>
+                    <tbody id="personalKINCalc7">
+                    </tbody>
+                </table>
+            </div>
+            <div class="col" id="personalKINTable8" hidden>
+                <table class="table table-sm table-striped table-hover table-bordered table-border-color">
+                    <thead class="result-header bg-light">
+                        <tr>
+                            <th scope="col">西暦(年齢)</th>
+                            <th scope="col">SC</th>
+                            <th scope="col">WS</th>
+                            <th scope="col">銀河の音</th>
+                        </tr>
+                    </thead>
+                    <tbody id="personalKINCalc8">
+                    </tbody>
+                </table>
+            </div>
+        </section>
+        <section class="mb-2 row overflow-auto" id="kinCycle">
+            <h3 class="container-fluid p-2 text-center bg-secondary bg-opacity-10 border-top border-bottom border-secondary result-section">KIN周期表</h3>
+            <div class="col" id="kinCycleTable1">
+                <table class="table table-sm table-striped table-hover table-bordered table-border-color">
+                    <thead class="result-header bg-light">
+                        <tr>
+                            <th scope="col">西暦</th>
+                            <th scope="col">周期</th>
+                        </tr>
+                    </thead>
+                    <tbody id="kinCycleCalc1">
+                    </tbody>
+                </table>
+            </div>
+            <div class="col" id="kinCycleTable2">
+                <table class="table table-sm table-striped table-hover table-bordered table-border-color">
+                    <thead class="result-header bg-light">
+                        <tr>
+                            <th scope="col">西暦</th>
+                            <th scope="col">周期</th>
+                        </tr>
+                    </thead>
+                    <tbody id="kinCycleCalc2">
+                    </tbody>
+                </table>
+            </div>
+            <div class="col" id="kinCycleTable3" hidden>
+                <table class="table table-sm table-striped table-hover table-bordered table-border-color">
+                    <thead class="result-header bg-light">
+                        <tr>
+                            <th scope="col">西暦</th>
+                            <th scope="col">周期</th>
+                        </tr>
+                    </thead>
+                    <tbody id="kinCycleCalc3">
+                    </tbody>
+                </table>
+            </div>
+            <div class="col" id="kinCycleTable4" hidden>
+                <table class="table table-sm table-striped table-hover table-bordered table-border-color">
+                    <thead class="result-header bg-light">
+                        <tr>
+                            <th scope="col">西暦</th>
+                            <th scope="col">周期</th>
+                        </tr>
+                    </thead>
+                    <tbody id="kinCycleCalc4">
+                    </tbody>
+                </table>
+            </div>
+            <div class="col" id="kinCycleTable5" hidden>
+                <table class="table table-sm table-striped table-hover table-bordered table-border-color">
+                    <thead class="result-header bg-light">
+                        <tr>
+                            <th scope="col">西暦</th>
+                            <th scope="col">周期</th>
+                        </tr>
+                    </thead>
+                    <tbody id="kinCycleCalc5">
+                    </tbody>
+                </table>
+            </div>
+            <div class="col" id="kinCycleTable6" hidden>
+                <table class="table table-sm table-striped table-hover table-bordered table-border-color">
+                    <thead class="result-header bg-light">
+                        <tr>
+                            <th scope="col">西暦</th>
+                            <th scope="col">周期</th>
+                        </tr>
+                    </thead>
+                    <tbody id="kinCycleCalc6">
+                    </tbody>
+                </table>
+            </div>
+            <div class="col" id="kinCycleTable7" hidden>
+                <table class="table table-sm table-striped table-hover table-bordered table-border-color">
+                    <thead class="result-header bg-light">
+                        <tr>
+                            <th scope="col">西暦</th>
+                            <th scope="col">周期</th>
+                        </tr>
+                    </thead>
+                    <tbody id="kinCycleCalc7">
+                    </tbody>
+                </table>
+            </div>
+            <div class="col" id="kinCycleTable8" hidden>
+                <table class="table table-sm table-striped table-hover table-bordered table-border-color">
+                    <thead class="result-header bg-light">
+                        <tr>
+                            <th scope="col">西暦</th>
+                            <th scope="col">周期</th>
+                        </tr>
+                    </thead>
+                    <tbody id="kinCycleCalc8">
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+    <!-- ページのヘッダー部分 -->
+    <div class="container-fluid d-flex flex-column bg-light border-bottom border-dark border-2" id="resultFormHeader">
+        <div class="row mt-1 align-self-center" id="resultFormHeaderChild">
+            <div class="col" id="birthdayInfo1Header">
+                <h5 id="birthdayName1Header"></h5>
+                <h5 id="resultBirthday1Header"></h5>
+                <h5 id="resultAge1Header"></h5>
+            </div>
+            <div class="col" id="birthdayInfo2Header">
+                <h5 id="birthdayName2Header"></h5>
+                <h5 id="resultBirthday2Header"></h5>
+                <h5 id="resultAge2Header"></h5>
+            </div>
+            <div class="col" id="birthdayInfo3Header" hidden>
+                <h5 id="birthdayName3Header"></h5>
+                <h5 id="resultBirthday3Header"></h5>
+                <h5 id="resultAge3Header"></h5>
+            </div>
+            <div class="col" id="birthdayInfo4Header" hidden>
+                <h5 id="birthdayName4Header"></h5>
+                <h5 id="resultBirthday4Header"></h5>
+                <h5 id="resultAge4Header"></h5>
+            </div>
+            <div class="col" id="birthdayInfo5Header" hidden>
+                <h5 id="birthdayName5Header"></h5>
+                <h5 id="resultBirthday5Header"></h5>
+                <h5 id="resultAge5Header"></h5>
+            </div>
+            <div class="col" id="birthdayInfo6Header" hidden>
+                <h5 id="birthdayName6Header"></h5>
+                <h5 id="resultBirthday6Header"></h5>
+                <h5 id="resultAge6Header"></h5>
+            </div>
+            <div class="col" id="birthdayInfo7Header" hidden>
+                <h5 id="birthdayName7Header"></h5>
+                <h5 id="resultBirthday7Header"></h5>
+                <h5 id="resultAge7Header"></h5>
+            </div>
+            <div class="col" id="birthdayInfo8Header" hidden>
+                <h5 id="birthdayName8Header"></h5>
+                <h5 id="resultBirthday8Header"></h5>
+                <h5 id="resultAge8Header"></h5>
+            </div>
+        </div>
+    </div>
+    <!-- ページのヘッダー部分 -->
+    <div class="container-fluid d-flex flex-column bg-dark border-bottom border-dark border-2" id="pageHeader">
+        <div class="row align-self-center" id="pageHeaderChild">
+            <button class="col btn btn-outline-light" id="jump-pageInit" name="init" type="button">ページ設定</button>
+            <button class="col btn btn-outline-light" id="jump-inputBirthday" name="init" type="button">生年月日入力</button>
+            <button class="col btn btn-outline-light" id="jump-kinBirthday" name="calc" type="button">ツォルキン</button>
+            <button class="col btn btn-outline-light" id="jump-otherCalendar" name="calc" type="button">日付</button>
+            <button class="col btn btn-outline-light" id="jump-storyKIN" name="calc" type="button">起承転結</button>
+            <button class="col btn btn-outline-light" id="jump-personalKIN" name="calc" type="button">個人KIN年表</button>
+            <button class="col btn btn-outline-light" id="jump-kinCycle" name="calc" type="button">KIN周期表</button>
+        </div>
+    </div>
+</body>
+</html>
