@@ -48,22 +48,22 @@ input[type="number"] {
     border-bottom: 2px solid var(--bs-dark);
 }
 
-.set-kinBirthdayHeight {
+div.set-kinBirthdayHeight {
     height: calc(var(--onePc-kinBirthday) * var(--pc-kinBirthday));
 }
-.set-compareKINHeight {
+div.set-compareKINHeight {
     height: calc(var(--onePc-compareKIN) * var(--pc-compareKIN));
 }
-.set-otherCalendarHeight {
+div.set-otherCalendarHeight {
     height: calc(var(--onePc-otherCalendar) * var(--pc-otherCalendar));
 }
-.set-storyKINHeight {
+div.set-storyKINHeight {
     height: calc(var(--onePc-storyKIN) * var(--pc-storyKIN));
 }
-.set-personalKINHeight {
+div.set-personalKINHeight {
     height: calc(var(--onePc-personalKIN) * var(--pc-personalKIN));
 }
-.set-kinCycleHeight {
+div.set-kinCycleHeight {
     height: calc(var(--onePc-kinCycle) * var(--pc-kinCycle));
 }
 
@@ -76,14 +76,22 @@ input[type="number"] {
     content-visibility: auto;
 }
 
-.set-kinBirthdayHeight,
-.set-compareKINHeight,
-.set-otherCalendarHeight,
-.set-storyKINHeight,
-.set-personalKINHeight,
-.set-kinCycleHeight {
-    margin-bottom: 0px;
+div.set-kinBirthdayHeight,
+div.set-compareKINHeight,
+div.set-otherCalendarHeight,
+div.set-storyKINHeight,
+div.set-personalKINHeight,
+div.set-kinCycleHeight {
     overflow: auto;
+}
+
+div.set-kinBirthdayHeight > table,
+div.set-compareKINHeight > table,
+div.set-otherCalendarHeight > table,
+div.set-storyKINHeight > table,
+div.set-personalKINHeight > table,
+div.set-kinCycleHeight > table {
+    margin-bottom: 0px;
 }
 
 #resultFormHeader {
