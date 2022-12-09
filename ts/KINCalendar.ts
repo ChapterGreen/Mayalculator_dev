@@ -17,6 +17,7 @@ const $calcResult = document.getElementById("calcResult") as HTMLHeadElement;
 const $inputValueForm = document.getElementById("inputValueForm") as HTMLDivElement;
 const $birthdayForm = document.getElementById("birthdayForm") as HTMLElement;
 const $kinBirthday = document.getElementById("kinBirthday") as HTMLElement;
+const $compareKIN = document.getElementById("compareKIN") as HTMLElement;
 const $otherCalendar = document.getElementById("otherCalendar") as HTMLElement;
 const $storyKIN = document.getElementById("storyKIN") as HTMLElement;
 const $personalKIN = document.getElementById("personalKIN") as HTMLElement;
@@ -170,12 +171,14 @@ class CalendarStatus {
 }
 class CalendarInfo {
     kinBirthday: string[][];
+    compareKIN: string[][];
     otherCalendar: string[][];
     storyKIN: string[][];
     personalKIN: string[][];
     kinCycle: string[][];
     constructor(allCalendarData: {[key: string]: string[][]}){
         this.kinBirthday = allCalendarData["kinBirthday"];
+        this.compareKIN = allCalendarData["compareKIN"];
         this.otherCalendar = allCalendarData["otherCalendar"];
         this.storyKIN = allCalendarData["storyKIN"];
         this.personalKIN = allCalendarData["personalKIN"];
@@ -184,6 +187,7 @@ class CalendarInfo {
     
     setAll(allCalendarData: {[key: string]: string[][]}){
         this.kinBirthday = allCalendarData["kinBirthday"];
+        this.compareKIN = allCalendarData["compareKIN"];
         this.otherCalendar = allCalendarData["otherCalendar"];
         this.storyKIN = allCalendarData["storyKIN"];
         this.personalKIN = allCalendarData["personalKIN"];
@@ -192,6 +196,9 @@ class CalendarInfo {
 
     getKINBirthday(){
         return this.kinBirthday;
+    }
+    getCompareKIN(){
+        return this.compareKIN;
     }
     getOtherCalendar(){
         return this.otherCalendar;
@@ -209,6 +216,7 @@ class CalendarInfo {
         let allData: {[key: string]: string[][]};
         allData = {
             "kinBirthday": this.kinBirthday,
+            "compareKIN": this.compareKIN,
             "otherCalendar": this.otherCalendar,
             "storyKIN": this.storyKIN,
             "personalKIN": this.personalKIN,
@@ -342,7 +350,7 @@ function InitTableHeight(){
         const $sectionElement = $resultForm.children[i] as HTMLElement;
         let tableId = $sectionElement.id;
         calendar.status[tableId].setOrgHeight(tableId);
-        if(i >= 2){
+        if(i >= 3){
             const $heightPcElement = document.getElementById(`pc-${tableId}`) as HTMLInputElement;
             $heightPcElement.form!.reset()
             calendar.status[tableId].setHeight(tableId, Number($heightPcElement.value));
@@ -1435,11 +1443,10 @@ function CalcHaabCalendar(calcMonth: number, calcDay: number){
 
 // カレンダーの表示状態を保存
 function GetCalendarHidden(){
-    calendar.status[$kinBirthday.id].setHidden($kinBirthday.hidden);
-    calendar.status[$otherCalendar.id].setHidden($otherCalendar.hidden);
-    calendar.status[$storyKIN.id].setHidden($storyKIN.hidden);
-    calendar.status[$personalKIN.id].setHidden($personalKIN.hidden);
-    calendar.status[$kinCycle.id].setHidden($kinCycle.hidden);
+    for(let i = 1; i < $resultForm.children.length; i++){
+        const $hiddenElement = $resultForm.children[i] as HTMLElement;
+        calendar.status[$hiddenElement.id].setHidden($hiddenElement.hidden);
+    }
 }
 // カレンダーの増減時に一時的に非表示にする
 function ChangeCalendarCnt(enableHide: boolean){
@@ -1455,44 +1462,24 @@ function PageHidden(index: number, hide: boolean){
     const $birthdayInfoElement = document.getElementById(`birthdayInfo${index}`) as HTMLDivElement;
     const $birthdayInfoHeaderElement = document.getElementById(`birthdayInfo${index}Header`) as HTMLDivElement;
     const $inputFormElement = document.getElementById(`inputForms${index}`) as HTMLDivElement;
-    const $kinBirthdayTableElement = document.getElementById(`kinBirthdayTable${index}`) as HTMLDivElement;
-    const $otherCalendarTableElement = document.getElementById(`otherCalendarTable${index}`) as HTMLDivElement;
-    const $storyKINTableElement = document.getElementById(`storyKINTable${index}`) as HTMLDivElement;
-    const $personalKINTableElement = document.getElementById(`personalKINTable${index}`) as HTMLDivElement;
-    const $kinCycleTableElement = document.getElementById(`kinCycleTable${index}`) as HTMLDivElement;
     $birthdayInfoElement.hidden = hide;
     $birthdayInfoHeaderElement.hidden = hide;
     $inputFormElement.hidden = hide;
-    $kinBirthdayTableElement.hidden = hide;
-    $otherCalendarTableElement.hidden = hide;
-    $storyKINTableElement.hidden = hide;
-    $personalKINTableElement.hidden = hide;
-    $kinCycleTableElement.hidden = hide;
+    for(let i = 1; i < $resultForm.children.length; i++){
+        let idStr = `${$resultForm.children[i].id}Table${index}`;
+        const $hiddenElement = document.getElementById(idStr) as HTMLDivElement;
+        $hiddenElement.hidden = hide;
+    }
 }
 
 // テーブルの中身を削除
 function DeleteTable(index: number){
-    // 変数宣言
-    const $kinBirthdayCalc = document.getElementById(`kinBirthdayCalc${index}`) as HTMLTableSectionElement;
-    const $otherCalendarCalc = document.getElementById(`otherCalendarCalc${index}`) as HTMLTableSectionElement;
-    const $storyKINCalc = document.getElementById(`storyKINCalc${index}`) as HTMLTableSectionElement;
-    const $personalKINCalc = document.getElementById(`personalKINCalc${index}`) as HTMLTableSectionElement;
-    const $kinCycleCalc = document.getElementById(`kinCycleCalc${index}`) as HTMLTableSectionElement;
-    // 各々の中身を削除
-    while($kinBirthdayCalc.firstChild){
-        $kinBirthdayCalc.removeChild($kinBirthdayCalc.firstChild);
-    }
-    while($otherCalendarCalc.firstChild){
-        $otherCalendarCalc.removeChild($otherCalendarCalc.firstChild);
-    }
-    while($storyKINCalc.firstChild){
-        $storyKINCalc.removeChild($storyKINCalc.firstChild);
-    }
-    while($personalKINCalc.firstChild){
-        $personalKINCalc.removeChild($personalKINCalc.firstChild);
-    }
-    while($kinCycleCalc.firstChild){
-        $kinCycleCalc.removeChild($kinCycleCalc.firstChild);
+    for(let i = 1; i < $resultForm.children.length; i++){
+        let idStr = `${$resultForm.children[i]}Calc${index}`;
+        const $hiddenElement = document.getElementById(idStr) as HTMLTableSectionElement;
+        while($hiddenElement.firstChild){
+            $hiddenElement.removeChild($hiddenElement.firstChild);
+        }
     }
 }
 // テーブルの作成
@@ -1515,7 +1502,26 @@ function GenerateTable(birthdayKINData: string[][], $pasteTable: HTMLTableSectio
 
 // KINカレンダーの取得
 function Get_kinBirthdayData(calcYear: number, calcMonth: number, calcDay: number){
-    return CalcADToKIN(calcYear, calcMonth, calcDay);
+    return CalcADToKIN(calcYear, calcMonth, calcDay, ["KINNum", "SC", "WS", "銀河の音", "5つの城"]);
+}
+// 相性比較表の取得
+function Get_compareKINData(calcYear: number, calcMonth: number, calcDay: number){
+    // 変数宣言
+    let compareData: string[][] = [];
+    let compareSC = CalcADToKIN(calcYear, calcMonth, calcDay, ["反対KIN", "類似KIN", "神秘KIN"]);
+    let compareWS: string[][] = [];
+    let compareOthers = CalcADToKIN(calcYear, calcMonth, calcDay, ["ガイドKIN", "逆ガイドKIN", "鏡KIN"]);
+    let orgWS = CalcADToKIN(calcYear, calcMonth, calcDay, ["WS"]);
+    let WSNum = KINLIST.indexOf(orgWS[0][1]) + 1;
+    // 計算
+    compareSC[0].splice(0, 1, "SC反対KIN");
+    compareSC[1].splice(0, 1, "SC類似KIN");
+    compareSC[2].splice(0, 1, "SC神秘KIN");
+    compareWS.push(["WS反対KIN", KINLIST[(WSNum + 9) % 20]]);
+    compareWS.push(["WS類似KIN", KINLIST[(38 - WSNum) % 20]]);
+    compareWS.push(["WS神秘KIN", KINLIST[(20 - WSNum)]]);
+    compareData = compareSC.concat(compareWS).concat(compareOthers);
+    return compareData;
 }
 // その他の暦の取得
 function Get_otherCalendarData(calcYear: number, calcMonth: number, calcDay: number){
@@ -1585,6 +1591,7 @@ function Get_kinCycleData(calcYear: number, calcMonth: number, calcDay: number, 
 function Get_allCalendarData(calcYear: number, calcnMonth: number, calcDay: number, calcRange: number){
     let allCalendarData: {[key: string]: string[][]} = {};
     allCalendarData["kinBirthday"] = Get_kinBirthdayData(calcYear, calcnMonth, calcDay);
+    allCalendarData["compareKIN"] = Get_compareKINData(calcYear, calcnMonth, calcDay);
     allCalendarData["otherCalendar"] = Object.values(Get_otherCalendarData(calcYear, calcnMonth, calcDay));
     allCalendarData["storyKIN"] = Get_storyKINData(calcYear, calcnMonth, calcDay);
     allCalendarData["personalKIN"] = Get_personalKINData(calcYear, calcnMonth, calcDay);
@@ -1597,6 +1604,12 @@ function Show_kinBirthday(calcYear: number, calcMonth: number, calcDay: number, 
     const $kinBirthdayCalc = document.getElementById(`kinBirthdayCalc${elementNum}`) as HTMLTableSectionElement;
     let birthdayKINData = Get_kinBirthdayData(calcYear, calcMonth, calcDay);
     GenerateTable(birthdayKINData, $kinBirthdayCalc);
+}
+// 相性比較表の表示
+function Show_compareKIN(calcYear: number, calcMonth: number, calcDay: number, elementNum: number){
+    const $compareKINCalc = document.getElementById(`compareKINCalc${elementNum}`) as HTMLTableSectionElement;
+    let compareKINData = Get_compareKINData(calcYear, calcMonth, calcDay);
+    GenerateTable(compareKINData, $compareKINCalc);
 }
 // その他の暦の表示
 function Show_otherCalendar(calcYear: number, calcMonth: number, calcDay: number, elementNum: number){
@@ -1632,6 +1645,10 @@ function ShowKINTable(calcYear: number, calcMonth: number, calcDay: number, elem
     // KINカレンダー
     if(calendar.status[$kinBirthday.id].getHidden() == false){
         Show_kinBirthday(calcYear, calcMonth, calcDay, elementNum);
+    }
+    // 相性比較表
+    if(calendar.status[$compareKIN.id].getHidden() == false){
+        Show_compareKIN(calcYear, calcMonth, calcDay, elementNum);
     }
     // 他の暦
     if(calendar.status[$otherCalendar.id].getHidden() == false){
