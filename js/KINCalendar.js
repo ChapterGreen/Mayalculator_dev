@@ -1520,7 +1520,7 @@ function PageHidden(index, hide) {
 // テーブルの中身を削除
 function DeleteTable(index) {
     for (let i = 1; i < $resultForm.children.length; i++) {
-        let idStr = `${$resultForm.children[i]}Calc${index}`;
+        let idStr = `${$resultForm.children[i].id}Calc${index}`;
         const $hiddenElement = document.getElementById(idStr);
         while ($hiddenElement.firstChild) {
             $hiddenElement.removeChild($hiddenElement.firstChild);
